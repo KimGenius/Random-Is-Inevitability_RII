@@ -1,2 +1,2 @@
 # Random-Is-Inevitability_RII
-선택을도와주는서비스입니다
+선택을 도와주는 서비스 입니다
