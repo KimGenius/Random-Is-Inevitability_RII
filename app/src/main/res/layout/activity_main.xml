@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="simsim.geniusk.randommachine.MainActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:scale_base_height="150"
+        app:scale_base_width="100"
+        app:scale_height="150"
+        app:scale_width="100">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#21b0ca"
+            app:scale_height="16"
+            app:scale_width="100">
+
+            <com.ssomai.android.scalablelayout.ScalableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:scale_base_height="16"
+                app:scale_base_width="100">
+
+                <TextView
+                    android:id="@+id/move_push_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/app_big_text"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    app:scale_height="15"
+                    app:scale_left="20"
+                    app:scale_textsize="5"
+                    app:scale_width="60" />
+
+                <ImageView
+                    android:id="@+id/result_delete_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/delete_all"
+                    app:scale_height="8"
+                    app:scale_left="84"
+                    app:scale_top="4"
+                    app:scale_width="8" />
+
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/result_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=", 구분으로 리스트를 적어주세요"
+            android:textColor="#121212"
+            app:scale_height="10"
+            app:scale_left="10"
+            app:scale_textsize="4"
+            app:scale_top="18"
+            app:scale_width="80" />
+
+        <EditText
+            android:id="@+id/rand_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="랜덤 리스트를 적어주세요"
+            app:scale_height="13"
+            app:scale_left="10"
+            app:scale_textsize="4"
+            app:scale_top="33"
+            app:scale_width="80" />
+
+        <TextView
+            android:id="@+id/edit_clean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="#ff444f"
+            app:scale_height="8"
+            app:scale_left="80"
+            app:scale_textsize="8"
+            app:scale_top="33"
+            app:scale_width="8" />
+
+        <Button
+            android:id="@+id/result_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#21b0ca"
+            android:text="RANDOM!"
+            android:textColor="#f4f4f4"
+            app:scale_height="10"
+            app:scale_left="10"
+            app:scale_textsize="4"
+            app:scale_top="48"
+            app:scale_width="80" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="10"
+            app:scale_left="16"
+            app:scale_top="80"
+            app:scale_width="30" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="10"
+            app:scale_left="46"
+            app:scale_top="80"
+            app:scale_width="30" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="80"
+            app:scale_top="60"
+            app:scale_width="100">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/data_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </ScrollView>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</FrameLayout>
