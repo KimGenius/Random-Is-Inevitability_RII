@@ -16,12 +16,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import cn.pedant.SweetAlert.SweetAlertDialog;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class MainActivity extends AppCompatActivity {
     private Button result_btn;
@@ -117,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                                     + " (list, result)  Values ('" + result + "', '" + result_arr.get(rand_num) + "');");
                             sampleDB.close();
                             refresh();
-//                        recreate(); 반짝임 현상 진짜 개같네
+//                        recreate();
 //                        overridePendingTransition(1000, 2000);
                         }
                     }.start();
@@ -195,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
     protected void showList() {
         try {
             SQLiteDatabase ReadDB = this.openOrCreateDatabase(dbName, MODE_PRIVATE, null);
-            //SELECT문을 사용하여 테이블에 있는 데이터를 가져옵니다..
+            // SELECT문을 사용하여 테이블에 있는 데이터를 가져옵니다..
             Cursor c = ReadDB.rawQuery("SELECT * FROM " + tableName + " ORDER BY idx DESC", null);
             if (c != null) {
                 if (c.moveToFirst()) {
